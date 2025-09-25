@@ -42,3 +42,8 @@ document.addEventListener('DOMContentLoaded',()=>{
         mensaje.innerHTML = 'curso: ' + objetoCurso.nombre + '<br>' + 'profesor: ' + objetoCurso.profesor + '<br>' + 'precio: ' + objetoCurso.precio + '<br>' + 'ciudad: ' + objetoCurso.ciudad  + '<br>' + 'cupo: ' + objetoCurso.cupo;
     }
 });
+
+btnCurso.addEventListener('click',()=>{
+    localStorage.removeItem('curso');
+    mensaje.innerHTML = ('No hay cursos agregados');
+});
