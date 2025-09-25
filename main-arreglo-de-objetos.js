@@ -35,7 +35,7 @@ formCurso.addEventListener('submit',(e)=>{
     
         const objetoCurso = JSON.parse(cursoCreado) //JSON.parse SE USA EN JAVASCRIPT PARA CONVERITR UNA CADENA DE TEXTO EN FORMATO JSON A UN OBBJETO
         mensaje.innerHTML = 'curso: ' + objetoCurso.nombre + '<br>' + 'profesor: ' + objetoCurso.profesor + '<br>' + 'precio: ' + objetoCurso.precio + '<br>' + 'ciudad: ' + objetoCurso.ciudad  + '<br>' + 'cupo: ' + objetoCurso.cupo;
-        
+    
     formCurso.reset();
 });
 
@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     if(cursoCreado){
         const objetoCurso = JSON.parse(cursoCreado) //JSON.parse SE USA EN JAVASCRIPT PARA CONVERITR UNA CADENA DE TEXTO EN FORMATO JSON A UN OBBJETO
         mensaje.innerHTML = 'curso: ' + objetoCurso.nombre + '<br>' + 'profesor: ' + objetoCurso.profesor + '<br>' + 'precio: ' + objetoCurso.precio + '<br>' + 'ciudad: ' + objetoCurso.ciudad  + '<br>' + 'cupo: ' + objetoCurso.cupo;
-
     }
 });
 
