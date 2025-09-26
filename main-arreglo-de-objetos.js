@@ -30,11 +30,11 @@ formCurso.addEventListener('submit',(e)=>{
         ciudad:ciudad,
         cupo:cupo
     }
-    localStorage.setItem('curso', JSON.stringify(nuevoCurso));
-    const cursoCreado = localStorage.getItem('curso');
-    
-        const objetoCurso = JSON.parse(cursoCreado) //JSON.parse SE USA EN JAVASCRIPT PARA CONVERITR UNA CADENA DE TEXTO EN FORMATO JSON A UN OBBJETO
-        mensaje.innerHTML = 'curso: ' + objetoCurso.nombre + '<br>' + 'profesor: ' + objetoCurso.profesor + '<br>' + 'precio: ' + objetoCurso.precio + '<br>' + 'ciudad: ' + objetoCurso.ciudad  + '<br>' + 'cupo: ' + objetoCurso.cupo;
+    // CAPTURAMOS EL ARREGLO EXISTENTE EN LOCALSTORAGE O LO CREAMOS VACIO SI NO EXISTE PREVIAMENTE
+    const cursosGuardados = JSON.parse(localStorage.getItem('cursos')) || [];
+    // AGREGAMOS AL ARREGLO CURSOS GUARDADOS EL NUEVO CURSO [] EL CURSO {} 
+    cursosGuardados.push(nuevoCurso);
+    localStorage.setItem('cursos', JSON.stringify(cursosGuardados));
     
     formCurso.reset();
 });
@@ -49,6 +49,6 @@ document.addEventListener('DOMContentLoaded',()=>{
 });
 
 btnCurso.addEventListener('click',()=>{
-    localStorage.removeItem('curso');
+    localStorage.removeItem('cursos');
     mensaje.innerHTML = ('No hay cursos agregados');
 });
