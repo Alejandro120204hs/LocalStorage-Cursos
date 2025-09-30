@@ -64,7 +64,7 @@ Abre un pull request.
 
 # Contacto
 
-GitHub: Alejandro120204hs
+GitHub: https://github.com/Alejandro120204hs
 
 Email: alejandro1202hs@gmail.com
 
